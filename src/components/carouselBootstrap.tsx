@@ -44,21 +44,21 @@ export default function CarouselBootstrap() {
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="./src/components/images/image1.png" class="d-block w-100" alt="Slide 1" />
+            <img src="./image1.png" class="d-block w-100" alt="Slide 1" />
             <div class="carousel-caption d-block">
               <h5>Conforto e Segurança</h5>
               <p>Leve seu pet com quem entende do assunto.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="./src/components/images/image2.png" class="d-block w-100" alt="Slide 2" />
+            <img src="/image2.png" class="d-block w-100" alt="Slide 2" />
             <div class="carousel-caption d-block">
               <h5>Motoristas Especializados</h5>
               <p>Profissionais preparados para transportar com carinho.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="./src/components/images/image3.png" class="d-block w-100" alt="Slide 3" />
+            <img src="./image3.png" class="d-block w-100" alt="Slide 3" />
             <div class="carousel-caption d-block">
               <h5>Para Todas as Raças e Tamanhos</h5>
               <p>Nos adaptamos ao perfil do seu pet.</p>
