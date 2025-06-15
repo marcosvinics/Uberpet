@@ -4,7 +4,8 @@ import '../styles/gradientCanvas.css'
 export function GradientCanvas() {
   useEffect(() => {
     // @ts-ignore
-    import('../utils/Gradient.js').then(({ Gradient }) => {
+    import('../utils/Gradient.js').then((module) => {
+      const Gradient = module.default
       const gradient = new Gradient()
       gradient.initGradient('#gradient-canvas')
     })
