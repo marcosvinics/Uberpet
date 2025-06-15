@@ -1,10 +1,13 @@
 import Layout from '../components/layout'
 import Navbar from '../components/Navbar'
+import { GradientCanvas } from '../components/GradientCanvas'
+import CarouselBootstrap from '../components/carouselBootstrap.tsx'
 
 const Home = () => {
   return (
     <div className="relative isolate min-h-screen w-full overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full z-0">
+        <GradientCanvas />
       </div>
 
       <Navbar />
@@ -21,6 +24,11 @@ const Home = () => {
             <p className="text-lg text-white mix-blend-difference">
               Conecte-se com motoristas especializados e leve seu pet com carinho e segurança aonde for necessário.
             </p>
+          </div>
+
+          {/* Carousel à direita */}
+          <div className="flex justify-center">
+            <CarouselBootstrap />
           </div>
         </section>
       </Layout>
