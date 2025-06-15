@@ -1,13 +1,14 @@
-import { useEffect } from 'react';
-import '../styles/gradientCanvas.css'; 
+import { useEffect } from 'react'
+import '../styles/gradientCanvas.css'
 
 export function GradientCanvas() {
   useEffect(() => {
+    // @ts-ignore
     import('../utils/Gradient.js').then(({ Gradient }) => {
-      const gradient = new Gradient();
-      gradient.initGradient('#gradient-canvas');
-    });
-  }, []);
+      const gradient = new Gradient()
+      gradient.initGradient('#gradient-canvas')
+    })
+  }, [])
 
   return (
     <canvas
@@ -15,5 +16,5 @@ export function GradientCanvas() {
       data-transition-in
       className="absolute top-0 left-0 w-full h-screen"
     />
-  );
+  )
 }
