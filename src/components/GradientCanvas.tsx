@@ -3,7 +3,7 @@ import '../styles/gradientCanvas.css';
 
 export function GradientCanvas() {
   useEffect(() => {
-    import('../utils/Gradient').then(({ Gradient }) => {
+    import('../utils/Gradient.js').then(({ Gradient }) => {
       const gradient = new Gradient();
       gradient.initGradient('#gradient-canvas');
     });
