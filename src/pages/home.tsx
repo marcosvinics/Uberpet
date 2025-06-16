@@ -1,33 +1,32 @@
-import Layout from '../components/layout'
-import Navbar from '../components/Navbar'
-import { GradientCanvas } from '../components/GradientCanvas'
-import CarouselBootstrap from '../components/carouselBootstrap.tsx'
+import Layout from '../components/layout.tsx'
+import Navbar from '../components/Navbar.tsx'
+import { GradientCanvas } from '../components/GradientCanvas.tsx'
+import CarouselBootstrap from '../components/CarouselBootstrap.tsx'
 
 const Home = () => {
   return (
-    <div className="relative isolate min-h-screen w-full overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-full z-0">
+    <div className="position-relative min-vh-100 w-100 overflow-hidden">
+      <div className="position-absolute top-0 start-0 w-100 h-100" style={{ zIndex: 0 }}>
         <GradientCanvas />
       </div>
 
       <Navbar />
 
-      {/* Conteúdo principal */}
-      <Layout className="relative z-10">
-        <section className="pt-[80px] min-h-[75vh] grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          {/* Texto à esquerda */}
-          <div className="relative space-y-4">
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight text-white mix-blend-difference">
+      <Layout className="position-relative">
+        <section
+          className="min-vh-75 row align-items-start gx-4 gy-4"
+          style={{ paddingTop: '6rem' }} 
+        >
+          <div className="col-12 col-md-6 position-relative">
+            <h1 className="display-4 fw-bold text-white" style={{ mixBlendMode: 'difference' }}>
               Transporte seguro e confortável para o seu pet
             </h1>
-
-            <p className="text-lg text-white mix-blend-difference">
+            <p className="fs-5 text-white mt-3" style={{ mixBlendMode: 'difference' }}>
               Conecte-se com motoristas especializados e leve seu pet com carinho e segurança aonde for necessário.
             </p>
           </div>
 
-          {/* Carousel à direita */}
-          <div className="flex justify-center">
+          <div className="col-12 col-md-6 d-flex justify-content-center">
             <CarouselBootstrap />
           </div>
         </section>
@@ -36,4 +35,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Home;

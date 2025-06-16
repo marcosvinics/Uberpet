@@ -1,5 +1,4 @@
-// src/App.tsx
-import Home from './pages/home'
+import Home from './pages/home.tsx'
 
 function App() {
   return (

@@ -1,96 +1,101 @@
-export default function CarouselBootstrap() {
-  const html = `
-  <!DOCTYPE html>
-  <html lang="pt-BR">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-      <style>
-        html, body {
-          margin: 0;
-          padding: 0;
-          height: 100%;
-          overflow: hidden;
-          background-color: #fff;
-        }
-        #carouselExampleCaptions {
-          width: 100%;
-          height: 100%;
-        }
-        .carousel-inner, .carousel-item, .carousel-item img {
-          height: 100%;
-        }
-        .carousel-item img {
-          object-fit: cover;
-        }
-        .carousel-caption {
-          background-color: rgba(0, 0, 0, 0.4);
-          padding: 1rem;
-          border-radius: 0.5rem;
-        }
-        .carousel-caption h5,
-        .carousel-caption p {
-          color: #fff;
-        }
-      </style>
-    </head>
-    <body>
-      <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="./image1.png" class="d-block w-100" alt="Slide 1" />
-            <div class="carousel-caption d-block">
-              <h5>Conforto e Segurança</h5>
-              <p>Leve seu pet com quem entende do assunto.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="/image2.png" class="d-block w-100" alt="Slide 2" />
-            <div class="carousel-caption d-block">
-              <h5>Motoristas Especializados</h5>
-              <p>Profissionais preparados para transportar com carinho.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="./image3.png" class="d-block w-100" alt="Slide 3" />
-            <div class="carousel-caption d-block">
-              <h5>Para Todas as Raças e Tamanhos</h5>
-              <p>Nos adaptamos ao perfil do seu pet.</p>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Anterior</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Próximo</span>
-        </button>
-      </div>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
-  </html>
-  `;
+import { useEffect } from 'react'
+
+const CarouselBootstrap = () => {
+  useEffect(() => {
+    import('bootstrap')
+  }, [])
 
   return (
-    <div className="w-full max-w-[400px] mx-auto aspect-square">
-      <iframe
-        srcDoc={html}
-        className="w-full h-full rounded-xl"
-        style={{
-          border: 'none',
-          overflow: 'hidden',
-        }}
-        title="Carousel Bootstrap com legendas"
-        scrolling="no"
-      />
+    <div
+      id="carouselExampleCaptions"
+      className="carousel slide carousel-fade rounded-4 overflow-hidden shadow"
+      data-bs-ride="carousel"
+      style={{ maxWidth: '400px', width: '100%' }}
+    >
+      {/* Indicadores */}
+      <div className="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          className="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        />
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        />
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        />
+      </div>
+
+      {/* Slides */}
+      <div className="carousel-inner" style={{ height: '400px' }}>
+        <div className="carousel-item active h-100">
+          <img
+            src="/image1.png"
+            className="d-block w-100 h-100 object-fit-cover"
+            alt="Slide 1"
+          />
+          <div className="carousel-caption d-block bg-dark bg-opacity-50 rounded p-3">
+            <h5 className="text-white">Conforto e Segurança</h5>
+            <p className="text-white">Leve seu pet com quem entende do assunto.</p>
+          </div>
+        </div>
+
+        <div className="carousel-item h-100">
+          <img
+            src="/image2.png"
+            className="d-block w-100 h-100 object-fit-cover"
+            alt="Slide 2"
+          />
+          <div className="carousel-caption d-block bg-dark bg-opacity-50 rounded p-3">
+            <h5 className="text-white">Motoristas Especializados</h5>
+            <p className="text-white">Profissionais preparados para transportar com carinho.</p>
+          </div>
+        </div>
+
+        <div className="carousel-item h-100">
+          <img
+            src="/image3.png"
+            className="d-block w-100 h-100 object-fit-cover"
+            alt="Slide 3"
+          />
+          <div className="carousel-caption d-block bg-dark bg-opacity-50 rounded p-3">
+            <h5 className="text-white">Para Todas as Raças e Tamanhos</h5>
+            <p className="text-white">Nos adaptamos ao perfil do seu pet.</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Controles */}
+      <button
+        className="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span className="carousel-control-prev-icon" aria-hidden="true" />
+        <span className="visually-hidden">Anterior</span>
+      </button>
+      <button
+        className="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span className="carousel-control-next-icon" aria-hidden="true" />
+        <span className="visually-hidden">Próximo</span>
+      </button>
     </div>
-  );
+  )
 }
+
+export default CarouselBootstrap
