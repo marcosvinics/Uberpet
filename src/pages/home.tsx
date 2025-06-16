@@ -1,4 +1,4 @@
-import Layout from '../components/layout.tsx'
+import Layout from '../components/Layout.tsx'
 import Navbar from '../components/Navbar.tsx'
 import { GradientCanvas } from '../components/GradientCanvas.tsx'
 import CarouselBootstrap from '../components/CarouselBootstrap.tsx'
