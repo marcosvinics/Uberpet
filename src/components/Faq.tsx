@@ -1,6 +1,6 @@
 const Faq = () => {
   return (
-    <section className="my-5" style={{ maxWidth: 800, margin: '0 auto' }}>
+    <section id="faq" className="my-5" style={{ maxWidth: 800, margin: '0 auto' }}>
       <h2 className="mb-4 text-center">F.A.Q</h2>
 
       <div className="accordion" id="accordionExample">

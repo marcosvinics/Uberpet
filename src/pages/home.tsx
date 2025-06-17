@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Layout from '../components/layout.tsx'
 import Navbar from '../components/Navbar.tsx'
 import { GradientCanvas } from '../components/GradientCanvas.tsx'
@@ -7,7 +7,8 @@ import QuemSomos from '../components/QuemSomos.tsx'
 import ComoFunciona from '../components/ComoFunciona.tsx'
 import Faq from '../components/Faq.tsx'
 import Contato from '../components/Contato.tsx'
-import Footer from '../components/Footer.tsx' // importe o footer
+import Footer from '../components/Footer.tsx'
+import ModalBootstrap from '../components/ModalBootstrap.tsx'
 
 const Home = () => {
   const [showModalMotorista, setShowModalMotorista] = useState(false)
@@ -56,13 +57,64 @@ const Home = () => {
         <Faq />
 
         <Contato />
-
-        {/* Aqui você pode colocar os modais no futuro */}
-        {/* {showModalMotorista && <ModalMotorista onClose={closeModalMotorista} />} */}
-        {/* {showModalTutor && <ModalTutor onClose={closeModalTutor} />} */}
       </Layout>
 
       <Footer />
+
+      <ModalBootstrap
+        title="Cadastro de Motorista"
+        show={showModalMotorista}
+        onClose={closeModalMotorista}
+      >
+        <form className="bg-white bg-opacity-75 p-4 rounded shadow-sm">
+          <div className="mb-3">
+            <label htmlFor="nomeMotorista" className="form-label">Nome Completo</label>
+            <input type="text" className="form-control" id="nomeMotorista" placeholder="Seu nome" />
+          </div>
+
+          <div className="mb-3">
+            <label htmlFor="emailMotorista" className="form-label">E-mail</label>
+            <input type="email" className="form-control" id="emailMotorista" placeholder="email@exemplo.com" />
+          </div>
+
+          <div className="mb-3">
+            <label htmlFor="telefoneMotorista" className="form-label">Telefone</label>
+            <input type="tel" className="form-control" id="telefoneMotorista" placeholder="(00) 00000-0000" />
+          </div>
+
+          <div className="mb-3">
+            <label htmlFor="veiculoMotorista" className="form-label">Modelo do Veículo</label>
+            <input type="text" className="form-control" id="veiculoMotorista" placeholder="Ex: Fiat Uno, Corolla" />
+          </div>
+
+          <button type="submit" className="btn btn-primary w-100">Enviar Cadastro</button>
+        </form>
+      </ModalBootstrap>
+
+      <ModalBootstrap
+        title="Cadastro de Tutor"
+        show={showModalTutor}
+        onClose={closeModalTutor}
+      >
+        <form className="bg-white bg-opacity-75 p-4 rounded shadow-sm">
+          <div className="mb-3">
+            <label htmlFor="nomeTutor" className="form-label">Nome Completo</label>
+            <input type="text" className="form-control" id="nomeTutor" placeholder="Seu nome" />
+          </div>
+
+          <div className="mb-3">
+            <label htmlFor="emailTutor" className="form-label">E-mail</label>
+            <input type="email" className="form-control" id="emailTutor" placeholder="email@exemplo.com" />
+          </div>
+
+          <div className="mb-3">
+            <label htmlFor="telefoneTutor" className="form-label">Telefone</label>
+            <input type="tel" className="form-control" id="telefoneTutor" placeholder="(00) 00000-0000" />
+          </div>
+
+          <button type="submit" className="btn btn-primary w-100">Enviar Cadastro</button>
+        </form>
+      </ModalBootstrap>
     </div>
   )
 }

@@ -1,5 +1,3 @@
-import React from 'react'
-
 interface ComoFuncionaProps {
   onOpenModalMotorista: () => void
   onOpenModalTutor: () => void
