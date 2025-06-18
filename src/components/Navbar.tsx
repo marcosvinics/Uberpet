@@ -4,10 +4,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="navbar navbar-expand-md fixed-top bg-dark bg-opacity-75 backdrop-blur shadow-sm">
+    <nav className="navbar navbar-expand-md fixed-top bg-dark navbar-dark bg-opacity-75 backdrop-blur shadow-sm">
       <div className="container" style={{ maxWidth: '1440px' }}>
         <a className="navbar-brand d-flex align-items-center gap-2 text-white" href="/">
-          <img src="/logo.svg" alt="Logo UberPet" width={32} height={32} />
+          <img src="/logo.png" alt="Logo UberPet" width={40} height={40} />
           <span className="fs-5 fw-bold">UberPet</span>
         </a>
 

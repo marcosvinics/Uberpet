@@ -13,7 +13,6 @@ const ComoFunciona: React.FC<ComoFuncionaProps> = ({ onOpenModalMotorista, onOpe
           style={{ cursor: 'default' }}
         >
           <div className="d-flex justify-content-center mb-3">
-            //svg
           </div>
           <h5 className="card-title text-center">Agende online</h5>
           <p className="card-text text-center">
@@ -26,7 +25,6 @@ const ComoFunciona: React.FC<ComoFuncionaProps> = ({ onOpenModalMotorista, onOpe
           style={{ cursor: 'default' }}
         >
           <div className="d-flex justify-content-center mb-3">
-            //svg
           </div>
           <h5 className="card-title text-center">Motoristas treinados</h5>
           <p className="card-text text-center">
@@ -39,7 +37,6 @@ const ComoFunciona: React.FC<ComoFuncionaProps> = ({ onOpenModalMotorista, onOpe
           style={{ cursor: 'default' }}
         >
           <div className="d-flex justify-content-center mb-3">
-            //svg
           </div>
           <h5 className="card-title text-center">Acompanhe pelo app</h5>
           <p className="card-text text-center">
@@ -54,7 +51,6 @@ const ComoFunciona: React.FC<ComoFuncionaProps> = ({ onOpenModalMotorista, onOpe
           onMouseLeave={e => (e.currentTarget.style.borderColor = '#dee2e6')}
         >
           <div className="d-flex justify-content-center mb-3">
-            //svg
           </div>
           <h5 className="card-title text-center">Seja um Motorista UberPET</h5>
           <p className="card-text text-center mb-3">
