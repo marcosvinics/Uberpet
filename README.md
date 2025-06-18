@@ -1,54 +1,49 @@
-# React + TypeScript + Vite
+# 🐾 UberPET - Single Page Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto desenvolvido como parte das atividades da disciplina de Desenvolvimento Web – IESGO. do professor https://github.com/romes-dev/. A proposta é construir uma página única e responsiva para a empresa fictícia **UberPET**, uma startup voltada ao transporte seguro de animais de estimação.
 
-Currently, two official plugins are available:
+## 📄 Descrição
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O site foi desenvolvido com foco em uma experiência de usuário moderna e agradável, utilizando **Bootstrap 5**, **HTML5**, **CSS3** e **JavaScript** puro. Todo o conteúdo está organizado em uma única página (single page), com navegação suave entre as seções.
 
-## Expanding the ESLint configuration
+## 🎯 Objetivos Atendidos
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- [x] Navbar fixa com logo SVG da UberPET  
+- [x] Slider (carousel) com 3 slides de destaque  
+- [x] Seção "Quem Somos"  
+- [x] Seção "Como Funciona" com cards e ícones  
+- [x] Seção "Seja um Motorista" com CTA e botão de cadastro  
+- [x] Cards para apresentação de serviços/benefícios  
+- [x] Call to Action (CTA) com destaque visual  
+- [x] Seção FAQ com accordion (mínimo 3 perguntas/respostas)  
+- [x] Formulário "Fale Conosco" com validação de campos  
+- [x] Modais para Cadastro e Login  
+- [x] Scroll suave via JavaScript e CSS  
+- [x] Design 100% responsivo  
+- [x] Uso de imagens e ícones SVG  
+- [x] Animações simples com Bootstrap/CSS  
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 💻 Tecnologias Utilizadas
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **HTML5**
+- **CSS3**
+- **Bootstrap 5**
+- **JavaScript Vanilla (ES6+)**
+- **SVGs (ícones e ilustrações)**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📌 Estrutura de Seções
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- **Navbar fixa:** com logo SVG e links de navegação
+- **Carousel:** 3 slides com imagens e textos promocionais
+- **Quem Somos:** visão da empresa e valores
+- **Como Funciona:** processo em 3 etapas com cards ilustrativos
+- **Serviços:** cards com ícones e benefícios
+- **CTA (Call to Action):** destaque visual com botão de ação
+- **Seja um Motorista:** chamada para recrutamento de parceiros
+- **FAQ:** perguntas frequentes em accordion
+- **Fale Conosco:** formulário com nome, e-mail e mensagem
+- **Modais:** janelas modais para cadastro de tutores e login
+
+## 📱 Responsividade
+
+A página foi construída com classes utilitárias do Bootstrap e testada em resoluções diversas, garantindo um comportamento adaptativo em telas de dispositivos móveis, tablets e desktops.
